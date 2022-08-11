@@ -28,7 +28,6 @@ class MVPMainActivity : AppCompatActivity(), GPAPresenter.IView {
         }
 
     }
-
     //update ui elements by data fetched by the student
     override fun setUserGPA(student: Student) {
         var gpa = 0f
