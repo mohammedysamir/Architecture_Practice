@@ -55,7 +55,7 @@ class MVPMainActivity : AppCompatActivity(), GPAPresenter.IView {
 *   2. View -> MVPMainActivity & activity_mvpmain.xml
 *   3. Model -> Student.
 *   4. Presenter ->
-*       4.1. We need to create Interface for each presenter. -> add functionalities that will do calculations (functionalities)
-*       4.2. We need to create concrete class for each interface. -> add parameter for the linked view
+*       4.1. We need to create Interface for each presenter. -> add functionalities that will link the view with the presenter ( will get the data from the presenter)
+*       4.2. We need to create concrete class for each interface. -> add parameter for the linked view => inside the implemented functions we take view's inputs and send them to the model, call view.functions() that will update the view
 *       4.3. Create inline interface in the concrete presenter class to connect view with the presenter (callback) -> this functions will be implemented in the view itself to update its layouts
 * */
