@@ -7,6 +7,7 @@ import android.view.View
 import androidx.appcompat.widget.AppCompatButton
 import com.myasser.architecture_practice.mvc.MVCMainActivity
 import com.myasser.architecture_practice.mvp.MVPMainActivity
+import com.myasser.architecture_practice.mvvm.view.MVVMMainActivity
 
 class SelectActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,9 +21,8 @@ class SelectActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.mvc_button ->startActivity(Intent(this@SelectActivity,MVCMainActivity::class.java))
-            //todo: hook other buttons when views are declared
             R.id.mvp_button ->startActivity(Intent(this@SelectActivity,MVPMainActivity::class.java))
-//            R.id.mvvm_button ->startActivity(Intent(this@SelectActivity,MVCMainActivity::class.java))
+            R.id.mvvm_button ->startActivity(Intent(this@SelectActivity,MVVMMainActivity::class.java))
         }
     }
 }
