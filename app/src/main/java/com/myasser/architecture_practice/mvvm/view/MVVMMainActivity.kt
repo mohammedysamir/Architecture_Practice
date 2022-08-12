@@ -18,7 +18,8 @@ class MVVMMainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_mvvmmain)
         studentNameEdit = findViewById(R.id.mvvm_student_name_edit)
         studentGradeEdit = findViewById(R.id.mvvm_student_grades_edit)
-        findViewById<AppCompatButton>(R.id.mvvm_result).setOnClickListener {
+        viewModel = CalculateGPAViewModel()
+        findViewById<AppCompatButton>(R.id.mvvm_calculate_button).setOnClickListener {
             //send data to view model and observe results.
             val studentName = studentNameEdit.text.toString().trim()
             val studentGradesList = studentGradeEdit.text.toString().split(",")
